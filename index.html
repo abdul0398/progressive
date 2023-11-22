@@ -1,0 +1,659 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <style type="text/css">
+             #btn_cal{
+                border: none;
+                background-color: #1a2258;
+                color: white;
+                padding: 8px 24px;
+                border-radius: 4px;
+                font-weight: 900;
+            }
+            #btn_cal:hover{
+                cursor: pointer;
+            }
+            .hide{
+                display: none;
+            }
+            @font-face {
+                font-family: AvenirSubset;
+                src: url('/spa-assets/fonts/avenir-optimized-subset.woff2') format('woff2'), url('/spa-assets/fonts/avenir-optimized-subset.woff') format('woff');
+                unicode-range: U+24,U+2C,U+30-39,U+41-5A,U+61-7A;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "Avenir Next";
+                src: url("/spa-assets/fonts/avenir-regular.woff2") format("woff2"), url("/spa-assets/fonts/avenir-regular.woff") format("woff");
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "Avenir Next";
+                src: url("/spa-assets/fonts/avenir-medium.woff2") format("woff2"), url("/spa-assets/fonts/avenir-medium.woff") format("woff");
+                font-weight: 500;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "Avenir Next";
+                src: url("/spa-assets/fonts/avenir-demibold.woff2") format("woff2"), url("/spa-assets/fonts/avenir-demibold.woff") format("woff");
+                font-weight: 600;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "Avenir Next";
+                src: url("/spa-assets/fonts/avenir-bold.woff2") format("woff2"), url("/spa-assets/fonts/avenir-bold.woff") format("woff");
+                font-weight: bold;
+                font-display: swap;
+            }
+
+            body {
+                font-family: sans-serif;
+            }
+
+            .fonts-loaded-1 body {
+                font-family: AvenirSubset;
+            }
+
+            .fonts-loaded-2 body {
+                font-family: "Avenir Next", sans-serif;
+            }
+        </style>
+        <link href="https://spaassets.99.co/spa-assets/dist/mobile.7818eecfeeb3a550fbc8.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="https://spaassets.99.co/spa-assets/dist/1189.b06f522ee65f7c3a3b3a.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="https://spaassets.99.co/spa-assets/dist/typography.10fa7bec6ab934700cf3.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="https://spaassets.99.co/spa-assets/dist/mobileForms.d6cb3acb66b0a2b63268.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="https://spaassets.99.co/spa-assets/dist/desktopForms.5172692ce7436bfd3404.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="https://spaassets.99.co/spa-assets/dist/9611.6e11475591668dd0af54.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="https://spaassets.99.co/spa-assets/dist/pages/ProgressivePaymentCalculator-page-mweb-js.3478e32d0a5be599efd6.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="https://spaassets.99.co/spa-assets/dist/mobile/components/footer/async/Footer.ec5ed6416438d6c50ce3.css" rel="stylesheet" type="text/css" media="screen"/>
+    </head>
+    <body>
+        <div id="content">
+            <div>
+                <div id="appContent">
+                    
+                    <div class="htZ53">
+                        <div class="_30gmO">
+                            <div>
+                                <h1 class="Z0npN _1roBp">Progressive payments calculator 2023</h1>
+                                <p class="JPolj _10yTh">
+                                    <span class="_15jg6">The progressive payment scheme is for properties that are in the process of being built. This scheme refers to payment by installments, with each payment made when a specific milestone of the development is reached.
+                                    <!-- -->
+                                    </span>
+                                    Fill in your details in the calculator below to see your progressive payment breakdown.
+                                </p>
+                            </div>
+                            <div class="XwHHe _3KC5H">
+                                <div class="Venlx">
+                                    <div class="_2MJxl">
+                                        <label for="application_status">Applicant status</label>
+                                    </div>
+                                <div>
+                                    <label for="single" class="l-radio">
+                                        <input type="radio" id="single" checked name="application_status" tabindex="1">
+                                        <span>Single</span>
+                                    </label>
+                                    <label for="joint" class="l-radio">
+                                        <input type="radio" id="joint" name="application_status" tabindex="2">
+                                        <span>Joint</span>
+                                </div>
+                                </div>
+                                <div class="Venlx">
+                                    <div class="_2MJxl">
+                                        <label for="residency">Residency</label>
+                                        <div data-tip="true" data-for="tooltip" class="_3jMx3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" class="_-0Dxc _1L7f4 _-0Dxc">
+                                                <g fill-rule="evenodd">
+                                                    <path d="M8 14.406c3.509 0 6.406-2.897 6.406-6.407 0-3.515-2.904-6.412-6.413-6.412-3.51 0-6.406 2.897-6.406 6.412 0 3.51 2.897 6.407 6.412 6.407zm0-1.374c-2.794 0-5.033-2.246-5.033-5.033 0-2.793 2.233-5.039 5.026-5.039 2.793 0 5.032 2.246 5.039 5.04.006 2.786-2.246 5.032-5.033 5.032zm-.033-7.07c.482 0 .86-.391.86-.86 0-.488-.378-.872-.86-.872-.469 0-.86.384-.86.872 0 .469.391.86.86.86zm-1.061 5.364c-.293 0-.515-.208-.515-.501 0-.28.222-.495.515-.495h.716V7.882h-.606c-.293 0-.514-.208-.514-.501 0-.28.221-.495.514-.495h1.179c.364 0 .56.248.56.638v2.806h.644c.287 0 .514.215.514.495 0 .293-.227.501-.514.501H6.906z" fill="currentColor"></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="_27w2z">
+                                        <div class="Cs00F">
+                                            <div class="_2fb12 Cs00F" style="display: flex; justify-content: space-between;">
+                                                <div id="single_selector" style="width: 49%;">
+                                                    <select id="main_residence"  class="_1bPS7 _2_S2M" name="residency_main">
+                                                        <option selected value="Singaporean">Singaporean</option>
+                                                        <option value="PR">PR</option>
+                                                        <option value="Foreigner">Foreigner</option>
+                                                    </select>
+                                                   
+                                                </div>
+                                                <div id="joint_selector" style="width: 49%;" class="hide">
+                                                    <select id="option_residence" class="_1bPS7 _2_S2M" name="residency_main">
+                                                        <option selected value="Singaporean">Singaporean</option>
+                                                        <option value="PR">PR</option>
+                                                        <option value="Foreigner">Foreigner</option>
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Venlx">
+                                    <div class="_2MJxl">
+                                        <label for="properties_owned">Properties owned</label>
+                                    </div>
+                                    <div class="_27w2z">
+                                        <div id="properties_owned" class="_2Vn7z">
+                                            <div class="_1g0O5">
+                                                <div class="B9NAp">
+                                                    <div>
+                                                        <label for="properties_owned1" class="l-radio">
+                                                          <input checked type="radio" value="0" id="properties_owned1" name="properties_owned" tabindex="1">
+                                                          <span>0</span>
+                                                        </label>
+                                                        <label for="properties_owned2" class="l-radio">
+                                                          <input type="radio" value="1" id="properties_owned2" name="properties_owned" tabindex="2">
+                                                          <span>1</span>
+                                                        </label>
+                                                        <label for="properties_owned3" class="l-radio">
+                                                        <input type="radio" value="2" id="properties_owned3" name="properties_owned" tabindex="2">
+                                                        <span>≥2</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Venlx">
+                                    <div class="_2MJxl">
+                                        <label for="property_value">Property value</label>
+                                    </div>
+                                    <div class="_27w2z">
+                                        <div class="_20K75 Cs00F">
+                                            <input type="text" id="price" class="_1HTP5 _2RYLp _2m-Jh" oninput="removeZero(this)" placeholder="Enter a price" value="500000"/>
+                                            <span class="_2nEaH _2Mcv8">SGD</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="_2IQEV Venlx">
+                                    <label for="loan_tenure" class="_1sxpo">Tenure (years)</label>
+                                    <div class="_1HIht _1dxU0">
+                                        <input style="width: 100%" type="range" id="tenurerange" min="4" max="35" step="1" value="30" oninput="updatetenureRange(this.value)">
+                                     <div>
+                                            <div>
+                                                <div style="height:6px;background:#1757d7;left:1%" class="_3_PEh"></div>
+                                                <div style="left:1%" class="htKNp _1Evvz">4</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#1757d7;left:20.35483870967742%" class="_3_PEh"></div>
+                                                <div style="left:20.35483870967742%" class="htKNp _1Evvz">10</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#1757d7;left:51.61290322580645%" class="_3_PEh"></div>
+                                                <div style="left:51.61290322580645%" class="htKNp _1Evvz">20</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#1757d7;left:81.87096774193549%" class="_3_PEh"></div>
+                                                <div style="left:81.87096774193549%" class="htKNp _1Evvz">30</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#1757d7;left:99%" class="_3_PEh"></div>
+                                                <div style="left:100%" class="htKNp">35</div>
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                    <input type="text" id="tenureInput" value="30" class="ttePw" oninput="updatetenureoutput(this.value)">
+
+                                </div>
+                                <div class="_2IQEV Venlx">
+                                    <label for="loan_percent" class="_1sxpo">Loan (%)</label>
+                                    <div class="_1HIht _1dxU0">
+                                        <input style="width: 100%" type="range" id="loanrange" min="10" max="75" step="1" value="75" oninput="updateLoanRange(this.value)">
+                                        <div>
+                                            <div>
+                                                <div style="height:6px;background:#17ba89;left:1%" class="_3_PEh"></div>
+                                                <div style="left:1%" class="htKNp _1Evvz">10</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#17ba89;left:15.384615384615385%" class="_3_PEh"></div>
+                                                <div style="left:15.384615384615385%" class="htKNp _1Evvz">20</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#17ba89;left:46.15384615384615%" class="_3_PEh"></div>
+                                                <div style="left:46.15384615384615%" class="htKNp _1Evvz">40</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#17ba89;left:76.92307692307693%" class="_3_PEh"></div>
+                                                <div style="left:76.92307692307693%" class="htKNp _1Evvz">60</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#17ba89;left:100%" class="_3_PEh"></div>
+                                                <div style="left:100%" class="htKNp _1Evvz">75</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" id="loanInput" value="75" class="ttePw" oninput="updateLoanoutput(this.value)">
+                                </div>
+                                <div class="_2IQEV Venlx">
+                                    <label for="interest_rate" class="_1sxpo">Interest rate (%)</label>
+                                    <div class="_1HIht _1dxU0">
+                                        <input style="width: 100%" type="range" id="interestrange" min="0.1" max="6" step="0.1" value="4" oninput="updateInterestRange(this.value)">
+                                        <div>
+                                            <div>
+                                                <div style="height:6px;background:#ea549c;left:15.254237288135592%" class="_3_PEh"></div>
+                                                <div style="left:15.254237288135592%" class="htKNp _1Evvz">1</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#ea549c;left:32.20338983050847%" class="_3_PEh"></div>
+                                                <div style="left:32.20338983050847%" class="htKNp _1Evvz">2</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#ea549c;left:49.15254237288135%" class="_3_PEh"></div>
+                                                <div style="left:49.15254237288135%" class="htKNp _1Evvz">3</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#ea549c;left:66.10169491525423%" class="_3_PEh"></div>
+                                                <div style="left:66.10169491525423%" class="htKNp _1Evvz">4</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#ea549c;left:83.05084745762711%" class="_3_PEh"></div>
+                                                <div style="left:83.05084745762711%" class="htKNp">5</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#ea549c;left:100%" class="_3_PEh"></div>
+                                                <div style="left:100%" class="htKNp">6</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#ea549c;left:0%" class="_3_PEh"></div>
+                                                <div style="left:-2%" class="htKNp _1Evvz">0.1</div>
+                                            </div>
+                                            <div>
+                                                <div style="height:6px;background:#ea549c;left:6.779661016949152%" class="_3_PEh"></div>
+                                                <div style="left:6.779661016949152%" class="htKNp _1Evvz">0.5</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" id="interestInput" value="4" class="ttePw" oninput="updateInterestoutput(this.value)">
+                                </div>
+
+                                <div style=" margin-top:30px; text-align: center;">
+                                    <button id="btn_cal" >Calculate</button>
+                                </div>
+
+                            </div>
+                            <div class="_1n-In _3zCbR" id="progressivePaymentsBreakdown">
+                                <div class="_2aYvD">
+                                    <h2 class="Z0npN _1eVLG">Progressive payments calculator 2023</h2>
+                                    <div class="_21FOp _2JmCl" id="loan_amount">Loan Amount (75%): $375,000</div>
+                                </div>
+                                <div class="Er6LY">
+                                    <div class="EwSLQ">
+                                        <div class="_23Y53">
+                                            <div class="_21FOp d66r8">1. Initial payment</div>
+                                            <div class="_3pFxd">
+                                                <svg viewBox="-1 -1 2 2" style="transform:rotate(-0.25turn)">
+                                                    <circle cx="0" cy="0" r="1" fill="transparent"></circle>
+                                                    <circle cx="0" cy="0" r="0.9" fill="transparent" stroke="#D3D3D3" stroke-width="0.1"></circle>
+                                                    <circle class="_354me" x="0" y="0" r="0.9" fill="transparent" stroke="#3893d9" stroke-width="0.1" style="stroke-dashoffset:994.3;transform:rotate(0deg)"></circle>
+                                                    <text text-anchor="middle" x="0" y="0" transform="rotate(90)" style="pointer-events:none">
+                                                        <tspan id="total_initial" x="1.9" dy="0" class="_11TX6 _3pZx6">$109,600</tspan>
+                                                        <tspan x="0" dy="0.25" class="_1oFDL">Total initial</tspan>
+                                                    </text>
+                                                </svg>
+                                            </div>
+                                            <div class="FeNi6">
+                                                <div class="rlD9h">
+                                                    <p class="JPolj _2nHQc">Option to Purchase (5%)</p>
+                                                    <p class="JPolj _3naYA" id="option_to_purchase">$25,000</p>
+                                                </div>
+                                                <div class="rlD9h">
+                                                    <p class="JPolj _2nHQc">Sale and Purchase (15%)</p>
+                                                    <p class="JPolj _3naYA" id="sale_and_purchase">$75,000</p>
+                                                </div>
+                                                <div class="rlD9h">
+                                                    <p class="JPolj _2nHQc">BSD</p>
+                                                    <p class="JPolj _3naYA" id="bsd_data">$9,600</p>
+                                                </div>
+                                                <div class="rlD9h">
+                                                    <p class="JPolj _2nHQc">ABSD</p>
+                                                    <p class="JPolj _3naYA" id="absd_data">$0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dXQH2">
+                                            <div class="_21FOp d66r8">2. Subsequent payment after each stage</div>
+                                            <div class="_3Q20d">
+                                                <div class="_35tu9" style="min-height:14px">
+                                                    <div class="_21FOp x8Vrk" style="white-space:pre-wrap;color:#3284c2">After 6 months</div>
+                                                    <div class="_1jCJT">
+                                                        <div class="VDKR4">
+                                                            <div class="_21FOp JiCrj">Foundation (10%)</div>
+                                                            <p class="JPolj lbUlN">5% cash/CPF ($25,000)5% loan for 6 months</p>
+                                                            <p class="JPolj lbUlN _2-XFB">After 6 months for 6 months</p>
+                                                        </div>
+                                                        <div id="foundation" class="_21FOp JiCrj _1dmUT">
+                                                            $50,000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="_35tu9" style="min-height:14px">
+                                                    <div class="_21FOp x8Vrk" style="white-space:pre-wrap;color:#3284c2">After 1 year</div>
+                                                    <div class="_1jCJT">
+                                                        <div class="VDKR4">
+                                                            <div class="_21FOp JiCrj">Unit Concrete Framework (10%)</div>
+                                                            <p class="JPolj lbUlN"></p>
+                                                            <p class="JPolj lbUlN _2-XFB">After 1 year for 6 months</p>
+                                                        </div>
+                                                        <div id="framework" class="_21FOp JiCrj _1dmUT">
+                                                            $50,000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="_35tu9" style="min-height:14px">
+                                                    <div class="_21FOp x8Vrk" style="white-space:pre-wrap;color:#3284c2">After 1 year 6 months</div>
+                                                    <div class="_1jCJT">
+                                                        <div class="VDKR4">
+                                                            <div class="_21FOp JiCrj">Brick Walls (5%)</div>
+                                                            <p class="JPolj lbUlN"></p>
+                                                            <p class="JPolj lbUlN _2-XFB">After 1 year 6 months for 3 months</p>
+                                                        </div>
+                                                        <div id="bricks" class="_21FOp JiCrj _1dmUT">
+                                                            $25,000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="_35tu9" style="min-height:14px">
+                                                    <div class="_21FOp x8Vrk" style="white-space:pre-wrap;color:#3284c2">After 1 year 9 months</div>
+                                                    <div class="_1jCJT">
+                                                        <div class="VDKR4">
+                                                            <div class="_21FOp JiCrj">Ceiling/Roofing (5%)</div>
+                                                            <p class="JPolj lbUlN"></p>
+                                                            <p class="JPolj lbUlN _2-XFB">After 1 year 9 months for 3 months</p>
+                                                        </div>
+                                                        <div id="ceiling" class="_21FOp JiCrj _1dmUT">
+                                                            $25,000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="_35tu9" style="min-height:14px">
+                                                    <div class="_21FOp x8Vrk" style="white-space:pre-wrap;color:#3284c2">After 2 years</div>
+                                                    <div class="_1jCJT">
+                                                        <div class="VDKR4">
+                                                            <div class="_21FOp JiCrj">Door/Window/Plumbing/Wiring (5%)</div>
+                                                            <p class="JPolj lbUlN"></p>
+                                                            <p class="JPolj lbUlN _2-XFB">After 2 years for 3 months</p>
+                                                        </div>
+                                                        <div id="door" class="_21FOp JiCrj _1dmUT">
+                                                            $25,000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="_35tu9" style="min-height:14px">
+                                                    <div class="_21FOp x8Vrk" style="white-space:pre-wrap;color:#3284c2">After 2 years 3 months</div>
+                                                    <div class="_1jCJT">
+                                                        <div class="VDKR4">
+                                                            <div class="_21FOp JiCrj">Carparks/Roads/Drains (5%)</div>
+                                                            <p class="JPolj lbUlN"></p>
+                                                            <p class="JPolj lbUlN _2-XFB">After 2 years 3 months for 3 months</p>
+                                                        </div>
+                                                        <div id="carpark" class="_21FOp JiCrj _1dmUT">
+                                                            $25,000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="_35tu9" style="min-height:14px">
+                                                    <div class="_21FOp x8Vrk" style="white-space:pre-wrap;color:#3284c2">After 2 years 6 months</div>
+                                                    <div class="_1jCJT">
+                                                        <div class="VDKR4">
+                                                            <div class="_21FOp JiCrj">TOP (25%)</div>
+                                                            <p class="JPolj lbUlN"></p>
+                                                            <p class="JPolj lbUlN _2-XFB">After 2 years 6 months for 1 year</p>
+                                                        </div>
+                                                        <div id="top" class="_21FOp JiCrj _1dmUT">
+                                                            $125,000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="_35tu9" style="min-height:14px">
+                                                    <div class="_21FOp x8Vrk" style="white-space:pre-wrap;color:#3284c2">After 3 years 6 months</div>
+                                                    <div class="_1jCJT">
+                                                        <div class="VDKR4">
+                                                            <div class="_21FOp JiCrj">Cert. of Completion (15%)</div>
+                                                            <p class="JPolj lbUlN"></p>
+                                                            <p class="JPolj lbUlN _2-XFB">After 3 years 6 months for 27 years</p>
+                                                        </div>
+                                                        <div id="certificate" class="_21FOp JiCrj _1dmUT">
+                                                            $75,000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="client-ad">
+                                    <div class="_24xKa" style="max-height:50px;max-width:320px;transform:scale(1);transform-origin:left">
+                                        <div class="_3QB9I">
+                                            <div class="_2Iwwf" style="justify-content:center;display:flex;width:320px">
+                                                <div id="div-gpt-ad-1650857787487-0" style="min-width:320px;min-height:50px" class="advertisement__container">
+                                                    <script type="b539cde9b580e6b1eaa60562-text/javascript">
+                                                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1650857787487-0'); });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+                <span></span>
+            </div>
+        </div>
+        <script>
+            document.getElementById("single").addEventListener("change", ()=>{
+                document.getElementById("joint_selector").classList.add("hide");
+
+
+            })
+
+            document.getElementById("joint").addEventListener("change", ()=>{
+                document.getElementById("joint_selector").classList.remove("hide");
+                
+
+            })
+
+
+
+
+            document.getElementById("btn_cal").addEventListener("click", ()=>{
+                // ############## Load Amount ##################
+                const loanPercent = parseInt(document.getElementById("loanrange").value);
+                const price = parseInt(document.getElementById("price").value);
+                const loanprice = (price / 100) * loanPercent;
+                document.getElementById("loan_amount").innerText = `Loan Amount (${loanPercent}%): ` + formatNumberToDollar(loanprice);
+                document.getElementById("option_to_purchase").textContent = formatNumberToDollar((price * 0.05));
+                document.getElementById("sale_and_purchase").textContent = formatNumberToDollar((price * 0.15));
+                document.getElementById("foundation").innerText = formatNumberToDollar((price * 0.10));
+                document.getElementById("framework").innerText = formatNumberToDollar((price * 0.10));
+                document.getElementById("bricks").innerText = formatNumberToDollar((price * 0.05));
+                document.getElementById("ceiling").innerText = formatNumberToDollar((price * 0.05));
+                document.getElementById("door").innerText = formatNumberToDollar((price * 0.05));
+                document.getElementById("carpark").innerText = formatNumberToDollar((price * 0.05));
+                document.getElementById("top").innerText = formatNumberToDollar((price * 0.25));
+                document.getElementById("certificate").innerText = formatNumberToDollar((price * 0.15));                     
+                console.log(loanprice, price, loanPercent);
+                const BSD = calculateBSD(price);
+                document.getElementById("bsd_data").innerText = formatNumberToDollar(BSD);
+                
+                
+                let radioButtons = document.getElementsByName("properties_owned");
+                let property_count = 0;
+                for (let i = 0; i < radioButtons.length; i++) {
+                    if (radioButtons[i].checked) {
+                        property_count = parseInt(radioButtons[i].value)
+                    }
+                }
+                const mainApplicantCitizenship = document.getElementById("main_residence").value;
+                const jointApplicantCitizenship = document.getElementById("option_residence").value;
+                
+                const ABSD = property_count == 0? calculateABSDWithZeroProperty(mainApplicantCitizenship,jointApplicantCitizenship) * price: calculateABSD(property_count,mainApplicantCitizenship,jointApplicantCitizenship ) * price;
+                document.getElementById("absd_data").innerText = formatNumberToDollar(ABSD);
+                document.getElementById("total_initial").textContent = formatNumberToDollar((price * 0.05) + (price * 0.15) + BSD + ABSD);
+                console.log(ABSD, mainApplicantCitizenship, jointApplicantCitizenship,property_count);
+
+
+
+
+            })
+
+
+
+
+
+        function updatetenureoutput(value) {
+        
+            document.getElementById('tenurerange').value = value;
+        }
+        function updatetenureRange(value) {
+            value = parseInt(value);
+            if (value >= 4 && value <= 35) {
+                document.getElementById('tenureInput').value = value;
+                
+            }
+        }
+        function updateLoanoutput(value){
+            document.getElementById('loanrange').value = value;
+            
+        }
+        function updateLoanRange(value) {
+            value = parseInt(value);
+            if (value >= 10 && value <= 75) {
+                document.getElementById('loanInput').value = value;
+                
+            }
+            
+        }
+        function updateInterestRange(value) {
+            value = parseFloat(value);
+            if (value >= 0.1 && value <= 6) {
+                document.getElementById('interestInput').value = value;
+                
+            }
+        }
+        function updateInterestoutput(value) {
+            document.getElementById('interestrange').value = value; 
+        }
+
+
+
+        function formatNumberToDollar(number) {
+            // Convert number to dollar notation with commas
+            return Number(number).toLocaleString('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                maximumFractionDigits: 0
+        });
+    }
+        
+        function calculateBSD(propertyPrice) {
+                        const tier1Limit = 180000;
+                        const tier2Limit = tier1Limit + 180000;
+                        const tier3Limit = tier2Limit + 640000;
+                        const tier4Limit = tier3Limit + 500000;
+                        const tier5Limit = tier4Limit + 1500000;
+                        const tier6Limit = 3000000;
+
+                        let stampDuty = 0;
+
+                        if (propertyPrice <= tier1Limit) {
+                            stampDuty = propertyPrice * 0.01; // 1% for the first 180000
+                        } else if (propertyPrice <= tier2Limit) {
+                            stampDuty = tier1Limit * 0.01 + (propertyPrice - tier1Limit) * 0.02; // 2% for the next 180000
+                        } else if (propertyPrice <= tier3Limit) {
+                            stampDuty = tier1Limit * 0.01 + (tier2Limit - tier1Limit) * 0.02 + (propertyPrice - tier2Limit) * 0.03; // 3% for the next 640000
+                        } else if (propertyPrice <= tier4Limit) {
+                            stampDuty = tier1Limit * 0.01 + (tier2Limit - tier1Limit) * 0.02 + (tier3Limit - tier2Limit) * 0.03 + (propertyPrice - tier3Limit) * 0.04; // 4% for the next 500000
+                        } else if (propertyPrice <= tier5Limit) {
+                            stampDuty = tier1Limit * 0.01 + (tier2Limit - tier1Limit) * 0.02 + (tier3Limit - tier2Limit) * 0.03 + (tier4Limit - tier3Limit) * 0.04 + (propertyPrice - tier4Limit) * 0.05; // 5% for the next 1500000
+                        } else {
+                            stampDuty = tier1Limit * 0.01 + (tier2Limit - tier1Limit) * 0.02 + (tier3Limit - tier2Limit) * 0.03 + (tier4Limit - tier3Limit) * 0.04 + (tier5Limit - tier4Limit) * 0.05 + (propertyPrice - tier5Limit) * 0.06; // 6% for any amount in excess of 3000000
+                        }
+
+                        return stampDuty;
+                    }
+        
+        
+        function calculateABSD(propertyCount, mainApplicantCitizenship, jointApplicantCitizenship) {
+            const singaporeanTaxSingleProperty = 0.2;
+            const prTaxSingleProperty = 0.3;
+            const foreignerTaxSingleProperty = 0.6;
+
+            const singaporeanTaxMultipleProperties = 0.3;
+            const prTaxMultipleProperties = 0.35;
+            const foreignerTaxMultipleProperties = 0.6;
+
+            let tax = 0;
+
+            if (propertyCount === 1) {
+                // Single property
+                if (mainApplicantCitizenship === 'Singaporean') {
+                    tax = singaporeanTaxSingleProperty;
+                } else if (mainApplicantCitizenship === 'PR') {
+                    tax = prTaxSingleProperty;
+                } else {
+                    tax = foreignerTaxSingleProperty;
+                }
+            } else if(propertyCount > 1 ) {
+                // Multiple properties
+                if (mainApplicantCitizenship === 'Singaporean') {
+                    tax = singaporeanTaxMultipleProperties;
+                } else if (mainApplicantCitizenship === 'PR') {
+                    tax = prTaxMultipleProperties;
+                } else {
+                    tax = foreignerTaxMultipleProperties;
+                }
+            }
+
+            // Check if joint applicant has different citizenship
+            if (jointApplicantCitizenship && jointApplicantCitizenship !== mainApplicantCitizenship) {
+                tax = Math.max(tax, calculateABSD(propertyCount, jointApplicantCitizenship, null));
+            }
+
+            // Calculate the actual tax amount based on the property price
+            return tax;
+        }
+        
+        function calculateABSDWithZeroProperty(mainApplicantCitizenship, jointApplicantCitizenship){
+                let tax = 0;    
+                const prTax = 0.05;
+                const foreignerTax = 0.6;
+
+                if (mainApplicantCitizenship === 'PR') {
+                    tax = prTax;
+                } else if (mainApplicantCitizenship === 'Foreigner') {
+                    tax = foreignerTax;
+                }
+
+                if(jointApplicantCitizenship && jointApplicantCitizenship !== mainApplicantCitizenship){
+                    tax = Math.max(tax, calculateABSDWithZeroProperty(mainApplicantCitizenship, null));
+                }
+                console.log(tax);
+                return tax;
+               }
+        
+        function removeZero(input) {
+                const value = input.value;
+
+                if (value.charAt(0) === '0') {
+                    input.value = value.slice(1); // Remove the leading 0
+                } else {
+                }
+            }
+        
+        </script>
+    </body>
+</html>
